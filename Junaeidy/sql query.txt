@@ -1,0 +1,10 @@
+- SELECT id_transaksi FROM `penjualan`
+- SELECT * FROM `penjualan` WHERE id_pelanggan='3'
+- SELECT DISTINCT id_produk FROM penjualan
+- SELECT total_harga FROM penjualan ORDER BY total_harga ASC
+- SELECT * FROM pelanggan WHERE nama_pelanggan LIKE "j%"
+- SELECT * FROM pelanggan WHERE alamat IN ("medan","helvetia")
+- SELECT id_pelanggan,tgl_transaksi FROM `transaksi`
+- SELECT * FROM transaksi ORDER BY tgl_transaksi DESC
+- SELECT * FROM produk WHERE stok BETWEEN 15 and 201 ORDER BY id_produk DESC
+- SELECT * FROM produk WHERE nama_produk LIKE "g%" 

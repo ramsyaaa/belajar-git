@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2023 at 08:25 PM
+-- Generation Time: Aug 06, 2023 at 06:23 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,7 +40,17 @@ CREATE TABLE `pelanggan` (
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `no_telepon`, `alamat`) VALUES
 (1, 'junaeidy', '022115546621', 'medan'),
-(2, 'pazrin', '081375499989', 'medan');
+(2, 'pazrin', '081375499989', 'medan'),
+(3, 'Jihan', '054645876987', 'Johor'),
+(4, 'Ella', '081929328765', 'Karya Wisata'),
+(5, 'Muhammad', '0987778299391', 'Pinang Baris'),
+(6, 'Rizky', '082777123485', 'Teladan'),
+(7, 'Setiawan', '092883812345', 'Sunggal'),
+(8, 'Khairunissa', '0299877419248', 'Polsek'),
+(9, 'Rara', '082999213382', 'Pancing'),
+(10, 'Irma', '098882773124', 'Unimed'),
+(11, 'Siti', '0812344123865', 'Helvetia'),
+(12, 'Erna', '082312494217', 'Seroja');
 
 -- --------------------------------------------------------
 
@@ -62,7 +72,17 @@ CREATE TABLE `penjualan` (
 
 INSERT INTO `penjualan` (`id_pelanggan`, `id_produk`, `id_transaksi`, `jumlah_produk`, `total_harga`) VALUES
 (1, 1, 1, '3', 54000),
-(2, 2, 2, '3', 45000);
+(2, 2, 2, '3', 45000),
+(3, 4, 3, '2', 48000),
+(5, 6, 7, '3', 42000),
+(7, 8, 4, '5', 345000),
+(9, 10, 9, '3', 12000),
+(11, 12, 8, '4', 466000),
+(4, 3, 10, '7', 308000),
+(6, 5, 11, '1', 14000),
+(8, 7, 6, '1', 11800),
+(10, 9, 12, '10', 80000),
+(12, 11, 5, '2', 462000);
 
 -- --------------------------------------------------------
 
@@ -74,7 +94,7 @@ CREATE TABLE `produk` (
   `id_produk` int(11) NOT NULL,
   `nama_produk` char(64) NOT NULL,
   `stok` varchar(256) NOT NULL,
-  `harga_produk` varchar(32) NOT NULL
+  `harga_produk` int(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -82,8 +102,18 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `stok`, `harga_produk`) VALUES
-(1, 'Happitos', '13', '18000'),
-(2, 'ANBATA', '49', '15000');
+(1, 'Happitos', '13', 18000),
+(2, 'ANBATA', '49', 15000),
+(3, 'ACT (Artesunate tablet 50 mg + Amodiaquine anhydrida tablet 200', '231', 44000),
+(4, 'Furosemid tablet 40 mg', '423', 24000),
+(5, 'Kalium klorda 0,30 g', '201', 14000),
+(6, 'Glukosa Anhidrat 2,7 g', '412', 14000),
+(7, 'Glibenklamida tablet 5 mg', '77', 11800),
+(8, 'Gemfibrozil tablet 600 mg', '32', 69000),
+(9, 'Glukosa larutan infus 10 % steril', '228', 8000),
+(10, 'Hidrokortison krim 2,5 %', '987', 4000),
+(11, 'Hioscine N Butilbromide tablet 10 mg', '26', 231000),
+(12, 'Isoniazid tablet 300 mg', '65', 116500);
 
 -- --------------------------------------------------------
 
@@ -103,7 +133,17 @@ CREATE TABLE `transaksi` (
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `tgl_transaksi`) VALUES
 (1, 1, '2023-08-02'),
-(2, 2, '2023-08-02');
+(2, 2, '2023-08-02'),
+(3, 3, '2023-08-04'),
+(4, 7, '2023-08-01'),
+(5, 12, '2023-08-04'),
+(6, 8, '2023-08-01'),
+(7, 5, '2023-08-03'),
+(8, 11, '2023-08-04'),
+(9, 9, '2023-08-03'),
+(10, 4, '2023-08-05'),
+(11, 6, '2023-08-05'),
+(12, 10, '2023-08-06');
 
 --
 -- Indexes for dumped tables
@@ -144,19 +184,19 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
