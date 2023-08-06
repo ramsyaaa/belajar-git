@@ -1,0 +1,5 @@
+- UPDATE `pelanggan` SET `alamat` = "Jakarta" WHERE id_pelanggan = "1"
+- UPDATE `pelanggan` SET `nama_pelanggan` = "Lili" WHERE id_pelanggan = "2"
+- UPDATE `produk` SET `stok`= "410" ,`harga_produk`= "15000" WHERE id_produk ="6"
+- DELETE FROM `transaksi` WHERE tgl_transaksi = "2023-08-02"
+- DELETE FROM `produk` WHERE id_produk = "1"
