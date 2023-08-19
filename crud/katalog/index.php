@@ -19,7 +19,7 @@
     <a href="../buku/" class="btn btn-outline-primary">Buku</a> |
     <a href="../penerbit/" class="btn btn-outline-primary">Penerbit</a> |
     <a href="../pengarang/" class="btn btn-outline-primary">Pengarang</a> |
-    <a href="../katalog/" class="btn btn-outline-primary">Katalog</a>
+    <a href="../katalog/" class="btn btn-outline-primary active">Katalog</a>
     <hr>
 </center>
 

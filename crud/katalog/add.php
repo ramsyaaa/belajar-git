@@ -1,6 +1,14 @@
 <html>
 <head>
 	<title>Add Katalog</title>
+	<style>
+	.col{
+		margin-top: 5px;
+	}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </head>
 
 <?php
@@ -11,25 +19,24 @@
 ?>
  
 <body>
-	<a href="index.php">Back</a>
-	<br/><br/>
- 
-	<form action="add.php" method="post" name="form1">
-		<table width="25%" border="0">
-			<tr> 
-				<td>Id Katalog</td>
-				<td><input type="text" name="id_katalog"></td>
-			</tr>
-			<tr> 
-				<td>Nama Katalog</td>
-				<td><input type="text" name="nama_katalog"></td>
-			</tr>
-			<tr> 
-				<td></td>
-				<td><input type="submit" name="Submit" value="Add"></td>
-			</tr>
-		</table>
-	</form>
+<div class="container">
+    <h2>Form Tambah Data Katalog</h2>
+    <form action="add.php" method="post">
+      <div class="row">
+		<div class="col">
+			<label for="id_katalog" class="form-label">Id Katalog</label>
+			<input type="text" class="form-control" name="id_katalog">
+		</div>
+      	<div class="col">
+			<label for="nama_katalog" class="form-label">Nama Katalog</label>
+			<input type="text" class="form-control" name="nama_katalog">
+      	</div>
+	  </div><br>
+	  <input type="submit" class="btn btn-primary" name="Submit" value="Tambah">
+	  <a href="index.php" class="btn btn-success">Kembali</a>
+	  
+    </form>
+</div>
 	
 	<?php
 	 

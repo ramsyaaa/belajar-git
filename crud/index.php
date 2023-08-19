@@ -10,7 +10,7 @@
 <body>
 <center>
     <hr>
-    <a href="../crud/" class="btn btn-outline-primary">Home</a> |
+    <a href="../crud/" class="btn btn-outline-primary active">Home</a> |
     <a href="../crud/buku/" class="btn btn-outline-primary">Buku</a> |
     <a href="../crud/penerbit/" class="btn btn-outline-primary">Penerbit</a> |
     <a href="../crud/pengarang/" class="btn btn-outline-primary">Pengarang</a> |

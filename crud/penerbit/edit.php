@@ -2,7 +2,14 @@
 <head>
 	<title>Edit Penerbit</title>
 </head>
+<style>
+	.col{
+		margin-top: 5px;
+	}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <?php
 	include_once("connect.php");
 	$id_penerbit = $_GET['id_penerbit'];
@@ -20,38 +27,42 @@
 ?>
  
 <body>
-	<a href="index.php">Go to Home</a>
-	<br/><br/>
- 
-	<form action="edit.php?id_penerbit=<?php echo $id_penerbit; ?>" method="post">
-		<table width="25%" border="0">
-			<tr> 
-				<td>Id Penerbit</td>
-				<td style="font-size: 11pt;"><?php echo $id_penerbit; ?> </td>
-			</tr>
-			<tr> 
-				<td>Nama penerbit</td>
-				<td><input type="text" name="nama_penerbit" value="<?php echo $nama_penerbit; ?>"></td>
-			</tr>
-			<tr> 
-				<td>Email</td>
-				<td><input type="text" name="email" value="<?php echo $email; ?>"></td>
-			</tr>
-			<tr> 
-				<td>No hp</td>
-				<td><input type="text" name="telp" value="<?php echo $telp; ?>"></td>
-			</tr>
-			<tr> 
-				<td>Alamat</td>
-				<td><input type="text" name="alamat" value="<?php echo $alamat; ?>"></td>
-			</tr>
-			<tr> 
-				<td></td>
-				<td><input type="submit" name="update" value="Update"></td>
-			</tr>
-		</table>
-	</form>
+<div class="container">
+    <h2>Form Ubah Data Penerbit</h2>
+    <form action="edit.php?id_penerbit=<?php echo $id_penerbit; ?>" method="post">
+      <div class="row">
+		<div class="col">
+			<label for="id_penerbit" class="form-label">Id Penerbit</label>
+			<input type="text" class="form-control" name="id_penerbit" value="<?php echo $id_penerbit; ?>" disabled>
+		</div>
+      	<div class="col">
+			<label for="nama_penerbit" class="form-label">Nama Penerbit</label>
+			<input type="text" class="form-control" name="nama_penerbit" value="<?php echo $nama_penerbit; ?>">
+      	</div>
+	  </div>
+	  <div class="row">
+		<div class="col">
+			<label for="email" class="form-label">Email</label>
+			<input type="email" class="form-control" name="email"  value="<?php echo $email; ?>">
+		</div>
+        <div class="col">
+	  		<label for="no_hp" class="form-label">No hp</label>
+			  <input type="text" class="form-control" name="telp" value="<?php echo $telp; ?>">
+	  	</div>
+      </div>
 	
+	  <div class="row">
+		<div class="col">
+			<label for="alamat" class="form-label">Alamat</label>
+			<input type="text" class="form-control" name="alamat" value="<?php echo $alamat; ?>">
+		</div>
+	  </div><br>
+	  <input type="submit" class="btn btn-primary" name="update" value="Perbarui">
+	  <a href="index.php" class="btn btn-success">Kembali</a>
+	  
+    </form>
+  </div>
+
 	<?php
 	 
 		// Check If form submitted, insert form data into users table.

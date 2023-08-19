@@ -19,7 +19,7 @@
 <center>
     <hr>
     <a href="../" class="btn btn-outline-primary">Home</a> |
-    <a href="../buku/" class="btn btn-outline-primary">Buku</a> |
+    <a href="../buku/" class="btn btn-outline-primary active">Buku</a> |
     <a href="../penerbit/" class="btn btn-outline-primary">Penerbit</a> |
     <a href="../pengarang/" class="btn btn-outline-primary">Pengarang</a> |
     <a href="../katalog/" class="btn btn-outline-primary">Katalog</a>
@@ -55,6 +55,9 @@
             echo "<td><a class='btn btn-primary' href='edit.php?isbn=$buku_data[isbn]'>Edit</a> | <a class='btn btn-danger' href='delete.php?isbn=$buku_data[isbn]'>Delete</a></td></tr>";        
         }
     ?>
+
+        
+    </script>
     </table>
 </body>
 </html>

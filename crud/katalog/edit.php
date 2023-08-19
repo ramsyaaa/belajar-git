@@ -2,6 +2,15 @@
 <head>
 	<title>Edit Penerbit</title>
 </head>
+<style>
+	.col{
+			margin-top: 5px;
+		}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
 
 <?php
 	include_once("connect.php");
@@ -17,25 +26,24 @@
 ?>
  
 <body>
-	<a href="index.php">Go to Home</a>
-	<br/><br/>
- 
-	<form action="edit.php?id_katalog=<?php echo $id_katalog; ?>" method="post">
-		<table width="25%" border="0">
-			<tr> 
-				<td>Id Penerbit</td>
-				<td style="font-size: 11pt;"><?php echo $id_katalog; ?> </td>
-			</tr>
-			<tr> 
-				<td>Nama penerbit</td>
-				<td><input type="text" name="nama_katalog" value="<?php echo $nama_katalog; ?>"></td>
-			</tr>
-				<td></td>
-				<td><input type="submit" name="update" value="Update"></td>
-			</tr>
-		</table>
-	</form>
-	
+<div class="container">
+    <h2>Form Ubah Data Katalog</h2>
+    <form action="edit.php?id_katalog=<?php echo $id_katalog; ?>" method="post">
+      <div class="row">
+		<div class="col">
+			<label for="id_katalog" class="form-label">Id Katalog</label>
+			<input type="text" class="form-control" name="id_katalog" value="<?php echo $id_katalog ?>" disabled>
+		</div>
+      	<div class="col">
+			<label for="nama_katalog" class="form-label">Nama Katalog</label>
+			<input type="text" class="form-control" name="nama_katalog" value="<?php echo $nama_katalog ?>">
+      	</div>
+	  </div><br>
+	  <input type="submit" class="btn btn-primary" name="update" value="Perbarui">
+	  <a href="index.php" class="btn btn-success">Kembali</a>
+	  
+    </form>
+</div>
 	<?php
 	 
 		// Check If form submitted, insert form data into users table.
